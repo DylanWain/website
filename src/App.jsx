@@ -32,7 +32,7 @@ function App () {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ phone: '1234567890', url: 'https://example.com' }),  
+        body: JSON.stringify({ phone, url }),  
       })
 
       console.log("send email", response);
@@ -79,9 +79,9 @@ function App () {
         <div className="hero-images">
           <div className="phone-mockup">
             <div className="video-call-grid">
-              <img src="/public/images/test-1.jpeg" alt="Apartment tour" className="main-image" />
-              <img src="/public/images/test-2.jpeg" alt="Video participant" className="participant-1" />
-              <img src="/public/images/test-3.jpeg" alt="Video participant" className="participant-2" />              
+              <img src="/images/test-1.jpeg" alt="Apartment tour" className="main-image" />
+              <img src="/images/test-2.jpeg" alt="Video participant" className="participant-1" />
+              <img src="/images/test-3.jpeg" alt="Video participant" className="participant-2" />              
             </div>
           </div>
         </div>
