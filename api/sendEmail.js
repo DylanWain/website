@@ -1,21 +1,21 @@
-export async function handler(req, res) {
+const nodemailer = require('nodemailer');
+
+module.exports = async function handler(req, res) {
   if (req.method === 'POST') {
     const { phone, url } = req.body;
 
-    // Example: Using Nodemailer to send the email
-    const nodemailer = require('nodemailer');
     const transporter = nodemailer.createTransport({
-      service: 'gmail', // Replace with your email service (e.g., Gmail, SendGrid)
+      service: 'gmail',
       auth: {
-        user: process.env.EMAIL_USER, // Your email address
-        pass: process.env.EMAIL_PASS, // Your email password or app-specific password
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
       },
     });
 
     try {
       await transporter.sendMail({
-        from: process.env.EMAIL_USER, // Sender's email
-        to: process.env.RECIPIENT_EMAIL, // Your email address
+        from: process.env.EMAIL_USER,
+        to: process.env.RECIPIENT_EMAIL,
         subject: `New Form Submission from Find Places`,
         html: `
           <p><strong>Phone Number: ${phone}</strong></p>
@@ -31,4 +31,4 @@ export async function handler(req, res) {
   } else {
     res.status(405).json({ success: false, message: 'Method not allowed' });
   }
-}
+};
