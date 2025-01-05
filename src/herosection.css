@@ -1,0 +1,138 @@
+.hero-container {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: #f7f9ff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background-color: #160672;
+    color: white;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 40px;
+    margin: auto;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  .hero-content {
+    display: flex;
+    padding: 60px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .hero-text {
+    flex: 1;
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  .hero-text h1 {
+    font-size: 48px;
+    color: #160672;
+    margin-bottom: 24px;
+    line-height: 1.2;
+  }
+  
+  .hero-text p {
+    font-size: 18px;
+    color: #4A4A4A;
+    margin-bottom: 32px;
+    line-height: 1.5;
+  }
+  
+  .book-tour-btn {
+    background-color: #69B578;
+    color: white;
+    border: none;
+    padding: 12px 32px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .book-tour-btn:hover {
+    background-color: #5a9c66;
+  }
+  
+  .hero-images {
+    flex: 1;
+    position: relative;
+    max-width: 600px;
+  }
+  
+  .phone-mockup {
+    position: relative;
+    width: 100%;
+    padding-bottom: 75%;
+  }
+  
+  .video-call-grid {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    padding: 20px;
+    background-color: #F0F0F0;
+    border-radius: 20px;
+  }
+  
+  .main-image {
+    grid-column: 2 / 4;
+    grid-row: 1 / 3;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .participant-1,
+  .participant-2,
+  .participant-3,
+  .participant-4 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .colleges-section {
+    padding: 40px 60px;
+    text-align: center;
+  }
+  
+  .colleges-text {
+    color: #4A4A4A;
+    margin-bottom: 32px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  .tags {
+    color: #666;
+    font-size: 14px;
+  }
+  
+  
