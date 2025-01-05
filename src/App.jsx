@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import './HeroSection.css';
+import './herosection.css';
 
 const title = "Tour apartments right from your home.";
 const description = "We help renters make informed decisions even if they are not in town. Finding Places virtual tours are hosted by local residents to provide an unbiased and comprehensive view of the apartment.";
