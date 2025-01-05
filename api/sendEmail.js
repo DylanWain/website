@@ -1,9 +1,10 @@
+import nodemailer from 'nodemailer';
+
 async function handler(req, res) {
   if (req.method === 'POST') {
     const { phone, url } = req.body;
 
     // Example: Using Nodemailer to send the email
-    const nodemailer = require('nodemailer');
     const transporter = nodemailer.createTransport({
       service: 'gmail', // Replace with your email service (e.g., Gmail, SendGrid)
       auth: {
