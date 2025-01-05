@@ -18,10 +18,30 @@ const colleges = [
 function App () {
   const [count, setCount] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
+  const [phone, setPhone] = useState('');
+  const [url, setUrl] = useState('');
 
   const openModal = () => {
     setIsOpen(true)
-  }
+  };
+
+  const sendEmail = async () => {
+    try {
+      const response = await fetch('/api/sendEmail', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ phone: '1234567890', url: 'https://example.com' }),  
+      })
+
+      console.log("send email", response);
+
+      setIsOpen(false);
+    } catch (error) {
+      console.log("Error sending email: ", error);
+    }
+  };
 
   return (
     <div className="hero-container">
@@ -29,13 +49,13 @@ function App () {
         ? <dialog open style={{ right: 0, left: 0, top: 0, bottom: 0}}> 
             <div style={{ display: "flex" }}>
               <p>Input phone number:</p>
-              <input />
+              <input onChange={(e) => setPhone(e.target.value)} value={phone} />
             </div>
             <div style={{ display: "flex" }}>
               <p>Input URL: </p>
-              <input />
+              <input onChange={(e) => setUrl(e.target.value)} value={url} />
             </div>
-            <button>Submit</button>
+            <button onClick={sendEmail}>Submit</button>
           </dialog> 
         : null
       }
