@@ -79,9 +79,9 @@ function App () {
         <div className="hero-images">
           <div className="phone-mockup">
             <div className="video-call-grid">
-              <img src="/images/test-1.jpeg" alt="Apartment tour" className="main-image" />
-              <img src="/images/test-2.jpeg" alt="Video participant" className="participant-1" />
-              <img src="/images/test-3.jpeg" alt="Video participant" className="participant-2" />              
+              <img src="/Images/test-1.jpeg" alt="Apartment tour" className="main-image" />
+              <img src="/Images/test-2.jpeg" alt="Video participant" className="participant-1" />
+              <img src="/Images/test-3.jpeg" alt="Video participant" className="participant-2" />              
             </div>
           </div>
         </div>
